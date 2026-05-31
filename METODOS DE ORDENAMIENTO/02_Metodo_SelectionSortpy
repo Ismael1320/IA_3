@@ -1,0 +1,42 @@
+# Este método organiza una lista de números de menor a mayor.
+
+# La idea principal es dividir la lista en dos partes:
+# una parte ordenada y otra sin ordenar.
+
+# En cada paso, el algoritmo busca el número más pequeño
+# dentro de la parte que aún no está ordenada.
+
+# Una vez encontrado, lo intercambia con el elemento que
+# ocupa la posición actual, colocándolo en el lugar correcto.
+
+# Este procedimiento se repite hasta recorrer toda la lista,
+# logrando que los elementos queden ordenados al finalizar.
+
+#---------------------------------------------------------------------------
+
+# Lista de números a ordenar
+numeros = [8, 3, 5, 1, 9, 2]
+
+print("Lista original:")
+print(numeros)
+
+# Recorremos toda la lista
+for i in range(len(numeros)):
+
+    # Suponemos que el elemento actual es el menor
+    indice_menor = i
+
+    # Buscamos si existe un número más pequeño
+    # en el resto de la lista
+    for j in range(i + 1, len(numeros)):
+
+        if numeros[j] < numeros[indice_menor]:
+            indice_menor = j
+
+    # Intercambiamos el menor encontrado
+    # con la posición actual
+    numeros[i], numeros[indice_menor] = numeros[indice_menor], numeros[i]
+
+# Mostramos la lista ordenada
+print("\nLista ordenada:")
+print(numeros)
