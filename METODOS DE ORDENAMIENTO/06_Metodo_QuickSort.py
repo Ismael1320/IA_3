@@ -1,16 +1,15 @@
-# Quick Sort (Ordenamiento Rápido)
 # Este algoritmo ordena una lista dividiéndola en grupos más pequeños.
-#
+
 # La idea principal es elegir un elemento llamado "pivote".
 # Después, los valores menores que el pivote se colocan a la izquierda
 # y los mayores a la derecha.
-#
+
 # El mismo proceso se repite para cada grupo hasta que todos
 # los elementos quedan ordenados.
-#
+
 # Quick Sort es uno de los algoritmos de ordenamiento más utilizados
 # debido a su buena eficiencia para listas grandes.
-
+#------------------------------------------------------------------------
 
 # Función Quick Sort
 def quick_sort(lista):
